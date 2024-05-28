@@ -1,0 +1,15 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+
+# Pastas de configuração do IntelliJ
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Pasta de artefatos e arquivos de execução
+out/
+
+# Logs e artefatos temporários
+.idea/*.iml
