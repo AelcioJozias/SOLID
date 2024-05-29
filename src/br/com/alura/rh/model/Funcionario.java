@@ -1,61 +1,36 @@
 package br.com.alura.rh.model;
 
 import java.math.BigDecimal;
-import java.math.RoundingMode;
 import java.time.LocalDate;
-
-import br.com.alura.rh.ValidacaoException;
 
 public class Funcionario {
 
-	private String nome;
-	private String cpf;
-	private Cargo cargo;
-	private BigDecimal salario;
+	private DadosPessoais dadosPessoais;
 	private LocalDate dataUltimoReajuste;
 
+	public Funcionario(LocalDate dataUltimoReajuste, DadosPessoais dadosPessoais) {
+		this.dataUltimoReajuste = dataUltimoReajuste;
+		this.dadosPessoais = dadosPessoais;
+	}
+
+	public DadosPessoais getDadosPessoais() {
+		return dadosPessoais;
+	}
+
+	public void setDadosPessoais(DadosPessoais dadosPessoais) {
+		this.dadosPessoais = dadosPessoais;
+	}
+
 	public Funcionario(String nome, String cpf, Cargo cargo, BigDecimal salario) {
-		this.nome = nome;
-		this.cpf = cpf;
-		this.cargo = cargo;
-		this.salario = salario;
+		this.dadosPessoais.setNome(nome);
+		this.dadosPessoais.setCpf(cpf);
+		this.dadosPessoais.setCargo(cargo);
+		this.dadosPessoais.setSalario(salario);
 	}
 
 	public void updateSalario(BigDecimal salario) {
-		this.salario = salario;
+		this.dadosPessoais.setSalario(salario);
 		this.dataUltimoReajuste = LocalDate.now();
-	}
-
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
-	public String getCpf() {
-		return cpf;
-	}
-
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
-	}
-
-	public Cargo getCargo() {
-		return cargo;
-	}
-
-	public void setCargo(Cargo cargo) {
-		this.cargo = cargo;
-	}
-
-	public BigDecimal getSalario() {
-		return salario;
-	}
-
-	public void setSalario(BigDecimal salario) {
-		this.salario = salario;
 	}
 
 	public LocalDate getDataUltimoReajuste() {
@@ -64,6 +39,10 @@ public class Funcionario {
 
 	public void setDataUltimoReajuste(LocalDate dataUltimoReajuste) {
 		this.dataUltimoReajuste = dataUltimoReajuste;
+	}
+
+	public void promover(Cargo cargo) {
+		this.getDadosPessoais().setCargo(cargo);
 	}
 
 }
