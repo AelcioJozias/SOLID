@@ -1,7 +1,8 @@
 <h1 align="center">
   SOLID
 </h1>
-Curso que explora e aplica as boas práticas e princípios do SOLID
+
+<p style="text-align: center">Curso com o intuito de aprender sobre as boas práticas do SOLID</p> 
 
 ## Certificado
 [Certificado ](https://cursos.alura.com.br/certificate/aelciojoziasputzel18/solid-orientacao-objetos-java?lang=pt_br)
