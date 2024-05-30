@@ -1,0 +1,22 @@
+
+
+Liskov Substitution (L):
+    Trata-se de focar no uso de composição ao invés de herenças.
+    O uso da herança só deve ser feito, quando B que extend A, consiga
+    substituir integralmente toda a classe A.
+
+
+Interface Segragations:
+    Fala sobre definir melhor uma segregação de interface.
+    Por exemplo, se entrar uma nova regra de negócio para uma classe existente
+    no sistema, a nova assinatura de método que vai na interface, deve fazer
+    sentido em todas as classes que implementam aquela interface.
+
+    Caso o contrário, deve ser criada uma nova interface que vai conter sua nova
+    assinatura, que será usado em um ponto isolado. Uma dica, se continuar precisando
+    da interface já existente é a nova interface extender da que já existe.
+
+
+Dependency Inversion
+    Esse ponto conecta muito bem com os outros, o nosso sistema usar mais a interface
+    do que a classe direta, fazendo o uso da injeção de dependência.
